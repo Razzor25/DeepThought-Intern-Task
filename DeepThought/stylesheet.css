@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+}
+nav{
+    height: 90px;
+    background: #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+nav .logo{
+    float: left;
+    margin-top: 24px;
+    margin-left: 2%;
+    background-color: #F0F0F0;
+}
+nav .logo img{
+    height: 3em;
+    background-color: #F0F0F0;
+}
+nav .profile{
+    float: right;
+    margin-top: 24px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+}
+nav .dotul{
+    padding: 0;
+    margin-top: 33px;
+    margin-right: 50px ;
+}
+nav .dotul li{
+    line-height: 5px;
+    display: block;
+    margin-top: 0;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+    margin-right: 2%;
+}
+nav li{
+    display: inline-block;
+    line-height: 50px;
+}
+nav ul li img{
+    border-radius: 50%;
+    width: 30px;
+    height: 50px;
+}
+
+@media (max-width: 650px)
+{
+    nav ul{
+        margin-top: 20px;
+        margin-right: 90px ;
+    }
+    nav li{
+        line-height: 20px;
+        display: block;
+        margin-top: 0;
+    }
+}
+
+
+.container{
+    display: flex;
+    box-sizing: border-box;
+    text-align: left;
+    margin: auto;
+}
+main{
+    display: grid;
+    grid-template-rows: 30px 200px 600px 600px 600px 600px 600px;
+    grid-template-columns: repeat(2,50%);
+    width: 75%;
+    margin: 50px auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.title{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 20px;
+    padding-top: 8px;
+    display: flex;
+    color: white;
+    vertical-align: baseline;
+    grid-column: 1/-1;
+    background-color: blue;
+}
+.top{
+    display: inline-flex;
+    align-items: center;
+    margin: auto;
+    grid-column: 1/-1;
+}
+
+
+.task{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 5% 85% 5%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.t1{
+    display: grid;
+    border-radius: 20px;
+    margin: 10px auto;
+    /* background-color: white; */
+    width: 460px;
+    height: 250px;
+}
+.task h3{
+    padding: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: lighter;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+.t2{
+    display: grid;
+    border-radius: 20px;
+    margin: 10px auto;
+    background-color: white;
+    width: 460px;
+    height: 500px;
+}
+.contents{
+    font-weight:600;
+    justify-content: center;
+    margin: auto;
+    padding: 0 10px;
+}
+
+
+.down{
+    display: flex;
+    text-align: right;
+}
+.icon{
+ padding:0 10px 20px 0;
+}
+.collapsible{
+    max-width: 460px;
+}
+.inner{
+    max-height: 1px;
+    overflow: hidden;    
+    border-radius: 5px;
+    line-height: 1.5;
+    position: relative;
+    top:-100%;
+    opacity: 0.5;
+    transition: all ease;
+}
+.collapsible input[type="checkbox"]:checked ~ .inner{
+    background-color: white;
+    font-weight:600;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    padding: 0 10px;
+    max-height: 500px;
+    padding-bottom: 25px;
+    opacity: 1;
+    top: 0;
+}
+.collapsible input:checked ~ .task .t1{
+ background-color: red;
+}
+.video{
+    grid-column: 1/-1;
+}
