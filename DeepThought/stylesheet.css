@@ -61,7 +61,7 @@ nav ul li img{
 }
 main{
     display: grid;
-    grid-template-rows: max-content fit-content(200px) fit-content(1000px) fit-content(1000px) fit-content(1000px);
+    grid-template-rows: max-content fit-content fit-content(1000px) fit-content(1000px) fit-content(1000px);
     grid-template-columns: repeat(2,50%);
     width: 75%;
     margin: 50px auto;
@@ -85,13 +85,15 @@ main{
     background-color: blue;
 }
 .r2{
-    display: inline-flex;
-    height: 200px;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    /* text-align: center; */
     font-weight: bolder;
     margin: auto;
-    align-items: center;
     grid-column: 1/-1;
 }
+
 .all{
     background-color: #fff;
     padding: 0;
@@ -206,13 +208,13 @@ h4{
 .inner-toggle:checked ~ .inner-expand{
     height:auto;
     color: rgb(233, 36, 36);
-    padding: 0 15px;
+    padding: 10px 10px 10px 10px;
 }
-.intro-expand{
+/* .intro-expand{
     align-items: center;
     text-align: center;
     padding: 20px;
-}
+} */
 .intro{
     box-sizing: border-box;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -221,22 +223,22 @@ h4{
     border: 0px;
     border-radius: 10px;
     outline: none;
-    height: 50px;
-    width: 50%;
+    min-height: 70px;
+    width: 70%;
     margin: 0;
 }
 
 .thread-expand{
-    padding: 20px;
-    text-align: center;
+
 }
 .thread-expand p{
+    padding: 3px 0;
     background-color: rgb(186, 182, 182);
+    box-sizing: border-box;
+    box-shadow: 0 -2px 4px  rgba(0, 0, 0, 0.4);
     color: black;
-    max-width: 50%;
+    max-width: 70%;
     text-align: left;
-    /* padding-left: 5px; */
-    margin: auto;
     border-top-left-radius:5px ;
     border-top-right-radius:10px ;
 }
@@ -249,15 +251,36 @@ h4{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     outline: none;
-    /* height: 50px; */
-    width: 50%;
+    width: 70%;
     margin: 0;
+    height: auto;
 }
 .inner-toggle{
     display: none;
 }
+#addexample{
+    cursor: pointer;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #0029FF;
+    color: white;
+    padding: 10px;
+    /* margin: 0 auto; */
+    text-align: center;
+}
+#addthread{
+    float: right;
+    cursor: pointer;
+    margin: 10px 30%;
+    border: 0;
+    border-radius: 5px;
+    background-color: #0029FF;
+    color: white;
+    padding: 10px ;
+}
 .r4-c2{
-    background-color: blue;
+    
 }
 .r5-c1{
     background-color: green;

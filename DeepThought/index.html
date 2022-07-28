@@ -48,7 +48,7 @@
        </div>
         <main>
             <div class="top">You are doing project here</div>
-            <div class="r2">demo task</div>
+            <div class="r2"><p>demo task</p></div>
             <div class="r3-c1 all">
                 <div class="wrapper">
                     <h3>Task heading 1</h3>
@@ -92,51 +92,63 @@
             </div>
             <div class="r4-c1 all">
                 <div class="wrapper">
-                    <h3>Task heading 1</h3>
+                    <h3>Task heading 3</h3>
                     <input class="toggle" id="toggle3" type="checkbox" checked>
                     <div class="inner-main">
                     <div>
                         <input class="inner-toggle" id="toggle4" type="checkbox" checked>
                         <section style="padding: 0;"class="inner-section">
-                            <h4>Introduction
-                                <label class="inner-arrow" for="toggle4"></label>
+                            <h4>
+                                <span style="padding-left: 10px;">Introduction</span>
+                                <label style="padding-right: 100px;" class="inner-arrow" for="toggle4"></label>
                             </h4>
                         </section>
                         
                         <div class="inner-expand" id="expand4">
-                            <div class="intro-expand">
+                            <!-- <div class="intro-expand"> -->
                                 <textarea class="intro" placeholder="Enter the introduction"></textarea>
-                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                     <div>
                         <input class="inner-toggle" id="toggle5" type="checkbox" checked>
                         <section style="padding: 0;"class="inner-section">
-                            <h4>Thread A
-                                <label class="inner-arrow" for="toggle5"></label>
+                            <h4>
+                                <span style="padding-left: 10px;">Thread A</span>
+                                <label style="padding-right: 100px;" class="inner-arrow" for="toggle5"></label>
                             </h4>
                         </section>
                         <div class="inner-expand" id="expand5">
                                 <div class="thread-expand">
                                         <p> Example 1</p>
-                                        <textarea class="thread" placeholder="Enter the introduction"></textarea>
+                                        <textarea class="thread" placeholder="Enter text here"></textarea>
                                 </div>
+                                <button id="addexample">+ Example</button>
+                                <div class="thread-expand">
+                                    <p> Arguement for Thread A</p>
+                                    <textarea class="thread" placeholder="Enter text here"></textarea>
+                                </div>
+                                <button id="addthread">+ New Thread</button>
                         </div>
                     </div>
                     <div>
                         <input class="inner-toggle" id="toggle6" type="checkbox" checked>
                         <section style="padding: 0;"class="inner-section">
-                            <h4>Conculsion
-                                <label class="inner-arrow" for="toggle6"></label>
+                            <h4>
+                                <span style="padding-left: 10px;">Conclusion</span>
+                                <label style="padding-right: 100px;"class="inner-arrow" for="toggle6"></label>
                             </h4>
                         </section>
                         <div class="inner-expand" id="expand6">
-                            <div>
-                                <h5 style="font-size: 18px">Description</h5>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <div class="thread-expand">
+                                <textarea class="intro" placeholder="Enter the Conclusion"></textarea>
                             </div>
+                            <button style="background-color: white;
+                                        padding: 0px;
+                                        "id="addthread">
+                                <i style="font-size: 30px;
+                                color: gray;"class="fa-solid fa-floppy-disk"></i>
+                            </button>
                         </div>
                     </div>
                     </div>
