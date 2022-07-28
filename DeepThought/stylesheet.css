@@ -1,5 +1,6 @@
 *{
     margin: 0px;
+    padding: 0px;
 }
 nav{
     height: 90px;
@@ -38,10 +39,11 @@ nav .dotul li{
 nav ul{
     float: right;
     list-style: none;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-right: 2%;
 }
 nav li{
+    padding-right: 5px;
     display: inline-block;
     line-height: 50px;
 }
@@ -51,130 +53,100 @@ nav ul li img{
     height: 50px;
 }
 
-@media (max-width: 650px)
-{
-    nav ul{
-        margin-top: 20px;
-        margin-right: 90px ;
-    }
-    nav li{
-        line-height: 20px;
-        display: block;
-        margin-top: 0;
-    }
-}
-
-
-.container{
-    display: flex;
-    box-sizing: border-box;
-    text-align: left;
-    margin: auto;
+#container{
+    position: absolute;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 10% 90% ;
 }
 main{
     display: grid;
-    grid-template-rows: 30px 200px 600px 600px 600px 600px 600px;
+    grid-template-rows: max-content fit-content(200px) 600px 600px 600px;
     grid-template-columns: repeat(2,50%);
     width: 75%;
     margin: 50px auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.title{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-left: 20px;
-    padding-top: 8px;
-    display: flex;
-    color: white;
-    vertical-align: baseline;
-    grid-column: 1/-1;
-    background-color: blue;
+    font-size: 18px;
 }
 .top{
-    display: inline-flex;
-    align-items: center;
-    margin: auto;
     grid-column: 1/-1;
+    background-color: cadetblue;
 }
-
-
-.task{
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 5% 85% 5%;
-    text-align: center;
+.r2{
+    display: inline-flex;
+    height: 200px;
+    margin: auto;
+    align-items: center;
+    grid-column: 1/-1;
+    background-color: bisque;
+}
+.all{
+    background-color: #fff;
+    padding: 0;
+    align-items: center;
+}
+.wrapper{
+    border-radius: 20px;
+    box-sizing: content-box;
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+    text-align: left;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-.t1{
-    display: grid;
-    border-radius: 20px;
-    margin: 10px auto;
-    /* background-color: white; */
-    width: 460px;
-    height: 250px;
-}
-.task h3{
-    padding: 5px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    font-weight: lighter;
-    overflow: hidden;
+.wrapper h3{
     background-color: black;
     color: white;
-}
-.t2{
-    display: grid;
-    border-radius: 20px;
-    margin: 10px auto;
-    background-color: white;
-    width: 460px;
-    height: 500px;
-}
-.contents{
-    font-weight:600;
-    justify-content: center;
-    margin: auto;
-    padding: 0 10px;
-}
-
-
-.down{
-    display: flex;
-    text-align: right;
-}
-.icon{
- padding:0 10px 20px 0;
-}
-.collapsible{
-    max-width: 460px;
-}
-.inner{
-    max-height: 1px;
-    overflow: hidden;    
-    border-radius: 5px;
-    line-height: 1.5;
-    position: relative;
-    top:-100%;
-    opacity: 0.5;
-    transition: all ease;
-}
-.collapsible input[type="checkbox"]:checked ~ .inner{
-    background-color: white;
-    font-weight:600;
-    justify-content: center;
-    margin: auto;
     text-align: center;
-    padding: 0 10px;
-    max-height: 500px;
-    padding-bottom: 25px;
-    opacity: 1;
-    top: 0;
 }
-.collapsible input:checked ~ .task .t1{
- background-color: red;
+#toggle1{
+    display: none;
 }
-.video{
-    grid-column: 1/-1;
+label{
+    font-weight: bolder;
+    display: block;
+    text-align: right;
+    padding-right: 15px;
+}
+
+#toggle1:checked ~ label:before{
+    font-size: 20px;
+    content: ">";
+    transform: rotate(270deg);
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+#toggle1:not(:checked) ~ label:before{
+    font-size: 20px;
+    content: ">";
+    transform: rotate(90deg);
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+.expand{
+   height: 0;
+   overflow: hidden;
+   transition: height 0.5s;
+   color: #fff;
+}
+section{
+    padding: 15px;
+}
+#toggle1:checked ~ #expand1{
+    height:auto;
+    color: black;
+    padding: 0 15px;
+}
+.r4-c1{
+    background-color: orange;
+}
+.r4-c2{
+    background-color: blue;
+}
+.r5-c1{
+    background-color: green;
+}
+.r5-c2{
+    background-color: purple;
 }
