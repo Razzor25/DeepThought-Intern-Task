@@ -61,12 +61,18 @@ nav ul li img{
 }
 main{
     display: grid;
-    grid-template-rows: max-content fit-content(200px) 600px 600px 600px;
+    grid-template-rows: max-content fit-content(200px) fit-content(1000px) 600px 600px;
     grid-template-columns: repeat(2,50%);
     width: 75%;
     margin: 50px auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 18px;
+}
+@media only screen and (max-width:720px){
+    main{
+        grid-template-columns: 1fr;
+    }
+
 }
 .top{
     grid-column: 1/-1;
@@ -75,10 +81,10 @@ main{
 .r2{
     display: inline-flex;
     height: 200px;
+    font-weight: bolder;
     margin: auto;
     align-items: center;
     grid-column: 1/-1;
-    background-color: bisque;
 }
 .all{
     background-color: #fff;
@@ -94,30 +100,31 @@ main{
     text-align: left;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
 }
 .wrapper h3{
     background-color: black;
     color: white;
     text-align: center;
 }
-#toggle1{
+.toggle{
     display: none;
 }
-label{
+.arrow{
     font-weight: bolder;
     display: block;
     text-align: right;
     padding-right: 15px;
 }
 
-#toggle1:checked ~ label:before{
+.arrow:before{
     font-size: 20px;
     content: ">";
     transform: rotate(270deg);
     vertical-align: text-bottom;
     display: inline-block;
 }
-#toggle1:not(:checked) ~ label:before{
+.toggle:not(:checked) ~ .arrow:before{
     font-size: 20px;
     content: ">";
     transform: rotate(90deg);
@@ -133,13 +140,33 @@ label{
 section{
     padding: 15px;
 }
-#toggle1:checked ~ #expand1{
+.toggle:checked ~ .expand{
     height:auto;
     color: black;
     padding: 0 15px;
 }
-.r4-c1{
-    background-color: orange;
+.comment{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    resize:none ;
+    border: 0px;
+    border-radius: 10px;
+    outline: none;
+    height: 200px;
+    width: 100%;
+    margin: 0;
+}
+
+h4{
+    padding-left: 10px;
+    background-color: lightgray;
+}
+.inner-section{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    padding: 15px 0;
+    height: 100px;
 }
 .r4-c2{
     background-color: blue;
