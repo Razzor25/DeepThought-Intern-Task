@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Thought</title>
     <script src="https://kit.fontawesome.com/a47532a96d.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="stylesheet.css"/>
 </head>
 <body>
@@ -43,9 +44,26 @@
     </section>
     
     <section id="container">
-       <div>
-        sidebar
-       </div>
+        
+        <div style="position: relative;">
+            <div class="sidebartop">
+                <h3>Journey Board
+                    <label id="btn"><i  style="font-size: 20px;"class='bx bx-menu'></i></label>
+                </h3>
+                
+            </div>
+            <div class="sidebar">
+            <label style="font-size:large; font-weight: bold; padding-left: 10px;">demo task</label>
+            <ul>
+                <li> * Task 1</li>
+                <li> * Task 3</li>
+                <li> * Task 2</li>
+                <li> * Task 4</li>
+                <li> * Task 5</li>
+                <li> * Task 6</li>
+            </ul>
+            </div>
+        </div>
         <main>
             <div class="top">You are doing project here</div>
             <div class="r2"><p>Name of the task goes here</p></div>
@@ -183,7 +201,7 @@
             </div>
             <div class="r5-c1 all">
                 <div class="wrapper">
-                    <h3>Task heading 4</h3>
+                    <h3>Task heading 5</h3>
                     <input class="toggle" id="toggle8" type="checkbox" >
                     <section>
                         <div>
@@ -204,7 +222,7 @@
             </div>
             <div class="r5-c2 all">
                 <div class="wrapper">
-                    <h3>Task heading 4</h3>
+                    <h3>Task heading 6</h3>
                     <input class="toggle" id="toggle9" type="checkbox" >
                     <section>
                         <div>
@@ -225,5 +243,14 @@
             </div>
         </main>
     </section>
+    <script>
+        let btn= document.querySelector("#btn");
+        let sidebar= document.querySelector(".sidebar");
+        let sidebartop=document.querySelector(".sidebartop");
+        btn.addEventListener("click",()=>{
+            sidebar.classList.toggle("active");
+            sidebartop.classList.toggle("active");
+        })
+    </script>
 </body>
 </html>

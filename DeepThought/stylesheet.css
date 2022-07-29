@@ -52,6 +52,11 @@ nav ul li img{
     width: 30px;
     height: 50px;
 }
+h3{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
 
 
 main{
@@ -79,8 +84,63 @@ h4{
 #container{
     position: absolute;
     display: grid;
+    padding-left: 0;
     margin: 0px;
     grid-template-columns: 10% 90% ;
+}
+.sidebar{
+    height: 50vh;    
+    position: fixed; 
+    width:190px; 
+    margin-top: 100px;
+    padding:20px 0 0 0;
+    box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+.sidebar ul{
+    padding: 10px 10px;
+}
+.sidebar ul li{
+    position: relative;
+    height: 30px;
+}
+.sidebartop{
+    padding: 10 10px 10 10;
+    position: fixed; 
+    width:190px;
+    transition: all 0.5s ease;
+}
+.sidebartop h3{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+    height: 50px;
+    border-top-right-radius:10px;
+    margin: 50px 0 0 0;
+    
+}
+.sidebar.active{
+    width: 100px;
+}
+.sidebar.active ul,.sidebar.active label{
+    opacity: 0;
+}
+.sidebartop.active{
+    width: 100px;
+}
+.sidebartop.active h3{
+    color: black;
+}
+.sidebartop.active #btn{
+    color: white;
+    position: relative;
+    margin:0 20% 0 0;
+}
+#btn{
+    float: right;
+    text-align: center;
+    margin-left: 10%;
 }
 .top{
     border-top-left-radius: 10px;
@@ -119,11 +179,7 @@ h4{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
 }
-.wrapper h3{
-    background-color: black;
-    color: white;
-    text-align: center;
-}
+
 .toggle{
     display: none;
 }
@@ -209,7 +265,6 @@ h4{
 }
 .inner-toggle:checked ~ .inner-expand{
     height:auto;
-    color: rgb(233, 36, 36);
     padding: 10px 10px 10px 10px;
 }
 .intro{
