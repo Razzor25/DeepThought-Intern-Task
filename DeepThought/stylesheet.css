@@ -53,12 +53,7 @@ nav ul li img{
     height: 50px;
 }
 
-#container{
-    position: absolute;
-    display: grid;
-    margin: 0px;
-    grid-template-columns: 10% 90% ;
-}
+
 main{
     display: grid;
     grid-template-rows: max-content fit-content fit-content(1000px) fit-content(1000px) fit-content(1000px);
@@ -68,11 +63,24 @@ main{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 18px;
 }
+section{
+    padding: 15px;
+}
+h4{
+    padding-left: 10px;
+    background-color: lightgray;
+}
 @media only screen and (max-width:720px){
     main{
         grid-template-columns: 1fr;
     }
 
+}
+#container{
+    position: absolute;
+    display: grid;
+    margin: 0px;
+    grid-template-columns: 10% 90% ;
 }
 .top{
     border-top-left-radius: 10px;
@@ -89,13 +97,14 @@ main{
     height: 100px;
     align-items: center;
     /* text-align: center; */
-    font-weight: bolder;
+    font-weight: 500;
     margin: auto;
     grid-column: 1/-1;
 }
 
 .all{
     background-color: #fff;
+    margin-bottom: 20px;
     padding: 0;
     align-items: center;
 }
@@ -146,9 +155,7 @@ main{
    transition: height 0.5s;
    color: #fff;
 }
-section{
-    padding: 15px;
-}
+
 .toggle:checked ~ .expand{
     height:auto;
     color: black;
@@ -165,11 +172,6 @@ section{
     height: 200px;
     width: 100%;
     margin: 0;
-}
-
-h4{
-    padding-left: 10px;
-    background-color: lightgray;
 }
 .inner-main{
     display: grid;
@@ -210,11 +212,6 @@ h4{
     color: rgb(233, 36, 36);
     padding: 10px 10px 10px 10px;
 }
-/* .intro-expand{
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-} */
 .intro{
     box-sizing: border-box;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -279,12 +276,16 @@ h4{
     color: white;
     padding: 10px ;
 }
+.pdf{
+    width: 100%;
+    height: 600px;
+}
 .r4-c2{
     
 }
 .r5-c1{
-    background-color: green;
+
 }
 .r5-c2{
-    background-color: purple;
+
 }
