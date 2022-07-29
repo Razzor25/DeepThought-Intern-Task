@@ -75,9 +75,31 @@ h4{
     padding-left: 10px;
     background-color: lightgray;
 }
-@media only screen and (max-width:720px){
+@media only screen and (max-width:1000px){
     main{
         grid-template-columns: 1fr;
+    }
+    .sidebar{
+        opacity: 0;
+    }
+    .sidebar ul,.sidebar label{
+        opacity: 0;
+    }
+    .sidebartop{
+        opacity: 0;
+    }
+    .sidebartop h3{
+        color: black;
+    }
+    .sidebartop #btn{
+        color: white;
+        position: relative;
+        margin:0 20% 0 0;
+    }
+    #btn{
+        float: right;
+        text-align: center;
+        margin-left: 10%;
     }
 
 }
